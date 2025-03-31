@@ -1,0 +1,38 @@
+User-agent: *
+
+# Дозволити доступ до основних файлів та папок
+Allow: /wp-content/uploads/
+Allow: /wp-content/themes/
+Allow: /*.css$
+Allow: /*.js$
+
+# Заборонити доступ до системних файлів
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /.htaccess
+Disallow: /local-xdebuginfo.php
+Disallow: /license.txt
+Disallow: /readme.html
+Disallow: /wp-*.php
+Disallow: /xmlrpc.php
+Disallow: /wp-json/
+Disallow: /wp-config-sample.php
+Disallow: /wp-links-opml.php
+Disallow: /wp-trackback.php
+
+# Заборонити доступ до службових URL
+Disallow: */trackback/
+Disallow: */feed/
+Disallow: /cgi-bin/
+Disallow: *?s=*
+Disallow: *&s=*
+Disallow: /search/
+Disallow: /page/
+Disallow: /comment-page-
+
+# Шлях до sitemap
+Sitemap: https://yoursite.com/sitemap.xml
+
+# Затримка між запитами
+Crawl-delay: 10
